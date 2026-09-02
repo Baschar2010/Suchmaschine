@@ -58,6 +58,10 @@ AL_AQSA_TEMPLATE = """
             justify-content: center;
             height: 100vh;
         }
+        .home-logo-icon {
+            font-size: 64px;
+            margin-bottom: 10px;
+        }
         .home-logo-text {
             font-size: 48px;
             font-weight: bold;
@@ -142,16 +146,17 @@ AL_AQSA_TEMPLATE = """
 
     {% if not query %}
     <div class="home-container">
+        <div class="home-logo-icon">🕌</div>
         <div class="home-logo-text">Al-Aqsa Suche</div>
-        <form method="GET" action="{{ request.host_url }}" class="home-search-box">
+        <form method="GET" action="" class="home-search-box">
             <input type="text" name="q" placeholder="Suchbegriff eingeben..." autocomplete="off" autofocus required>
             <button type="submit">Suchen</button>
         </form>
     </div>
     {% else %}
     <div class="header">
-        <a href="/" class="header-brand">Al-Aqsa</a>
-        <form method="GET" action="{{ request.host_url }}" class="header-search-form">
+        <a href="/" class="header-brand">🕌 Al-Aqsa</a>
+        <form method="GET" action="" class="header-search-form">
             <input type="text" name="q" value="{{ query }}" autocomplete="off" required>
             <button type="submit">Suche</button>
         </form>
